@@ -1,0 +1,831 @@
+/*==================================================
+  EZEE TOUR & TRAVELS
+==================================================*/
+
+:root{
+
+    --primary:#0B1F3A;
+    --secondary:#F4B400;
+    --light:#F8F9FA;
+    --white:#fff;
+    --text:#2c2c2c;
+
+}
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+    color:var(--text);
+    overflow-x:hidden;
+    background:#fff;
+
+}
+
+a{
+
+    text-decoration:none;
+
+}
+
+img{
+
+    width:100%;
+    display:block;
+
+}
+
+.section-subtitle{
+
+    color:var(--secondary);
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+
+}
+
+.section-title{
+
+    font-size:42px;
+    font-weight:700;
+    color:var(--primary);
+
+}
+
+.btn-warning{
+
+    background:var(--secondary);
+    border:none;
+    color:#000;
+    font-weight:600;
+    border-radius:50px;
+    padding:12px 28px;
+    transition:.4s;
+
+}
+
+.btn-warning:hover{
+
+    background:#d89b00;
+    transform:translateY(-3px);
+
+}
+
+.btn-outline-light{
+
+    border-radius:50px;
+    padding:12px 28px;
+
+}
+
+/*==============================
+NAVBAR
+==============================*/
+
+.navbar{
+
+    transition:.4s;
+    padding:18px 0;
+    background:rgba(11,31,58,.35);
+    backdrop-filter:blur(10px);
+
+}
+
+.navbar.scrolled{
+
+    background:var(--primary);
+    box-shadow:0 10px 25px rgba(0,0,0,.2);
+
+}
+
+.navbar-brand{
+
+    color:#fff;
+    font-size:32px;
+    font-weight:800;
+
+}
+
+.navbar-brand i{
+
+    color:var(--secondary);
+
+}
+
+.nav-link{
+
+    color:#fff;
+    margin-left:20px;
+    font-weight:500;
+    transition:.3s;
+
+}
+
+.nav-link:hover{
+
+    color:var(--secondary);
+
+}
+
+.navbar-toggler{
+
+    border:none;
+
+}
+
+.navbar-toggler:focus{
+
+    box-shadow:none;
+
+}
+
+/*==============================
+HERO
+==============================*/
+
+.hero{
+
+    position:relative;
+    min-height:100vh;
+
+    background:url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=80");
+
+    background-size:cover;
+    background-position:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+    rgba(8,18,40,.82),
+    rgba(8,18,40,.75));
+
+}
+
+.hero .container{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.hero-tag{
+
+    display:inline-block;
+
+    background:rgba(255,255,255,.15);
+
+    padding:10px 18px;
+
+    border-radius:50px;
+
+    color:#fff;
+
+    margin-bottom:20px;
+
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:68px;
+
+    font-weight:800;
+
+    line-height:1.15;
+
+}
+
+.hero h1 span{
+
+    color:var(--secondary);
+
+}
+
+.hero p{
+
+    color:#eee;
+
+    max-width:650px;
+
+    font-size:20px;
+
+    margin:30px 0;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-features{
+
+    display:flex;
+
+    gap:35px;
+
+    margin-top:45px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-features div{
+
+    color:#fff;
+
+    font-weight:500;
+
+}
+
+.hero-features i{
+
+    color:var(--secondary);
+
+    margin-right:8px;
+
+}
+
+/*==============================
+ABOUT
+==============================*/
+
+.about{
+
+    padding:100px 0;
+
+}
+
+.feature-box{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    padding:25px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+}
+
+.feature-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.feature-box i{
+
+    font-size:40px;
+
+    color:var(--secondary);
+
+    margin-bottom:15px;
+
+}
+
+/*==============================
+SERVICES
+==============================*/
+
+.services{
+
+    background:#f8f9fa;
+
+    padding:100px 0;
+
+}
+
+.service-card{
+
+    background:#fff;
+
+    padding:35px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.service-card:hover{
+
+    transform:translateY(-10px);
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.service-card i{
+
+    font-size:50px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.service-card h4{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+/*==============================
+Responsive
+==============================*/
+
+@media(max-width:991px){
+
+.hero h1{
+
+font-size:52px;
+
+}
+
+.section-title{
+
+font-size:34px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.hero{
+
+text-align:center;
+
+}
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-features{
+
+justify-content:center;
+
+}
+
+.nav-link{
+
+margin-left:0;
+
+padding:12px 0;
+
+}
+
+.navbar-collapse{
+
+background:var(--primary);
+
+padding:20px;
+
+border-radius:15px;
+
+margin-top:15px;
+
+}
+
+}
+
+@media(max-width:576px){
+
+.hero h1{
+
+font-size:32px;
+
+}
+
+.hero-tag{
+
+font-size:12px;
+
+}
+
+.btn-warning,
+.btn-outline-light{
+
+width:100%;
+
+}
+
+}
+/* ================= FLEET ================= */
+
+
+.fleet{
+padding-top:120px;
+}
+
+
+.fleet-card{
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+height:100%;
+
+display:flex;
+
+flex-direction:column;
+
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+transition:.3s;
+
+}
+
+
+.fleet-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+
+
+.fleet-image{
+
+height:220px;
+
+overflow:hidden;
+
+}
+
+
+.fleet-image img{
+
+width:100%;
+
+height:100%;
+
+object-fit:cover;
+
+}
+
+
+.fleet-content{
+
+padding:20px;
+
+display:flex;
+
+flex-direction:column;
+
+flex:1;
+
+}
+
+
+
+.fleet-content h4{
+
+font-size:22px;
+
+font-weight:700;
+
+color:#0B1F3A;
+
+}
+
+
+
+.fleet-content h5{
+
+color:#F4B400;
+
+font-weight:700;
+
+}
+
+
+
+.fleet-content ul{
+
+padding:0;
+
+list-style:none;
+
+margin:15px 0;
+
+}
+
+
+.fleet-content li{
+
+margin-bottom:8px;
+
+font-size:14px;
+
+}
+
+
+.fleet-content i{
+
+color:#F4B400;
+
+margin-right:8px;
+
+}
+
+
+
+.fleet-content .btn{
+
+margin-top:auto;
+
+}
+
+
+
+/* MOBILE */
+
+
+@media(max-width:576px){
+
+
+.fleet-image{
+
+height:130px;
+
+}
+
+
+.fleet-content{
+
+padding:12px;
+
+}
+
+
+.fleet-content h4{
+
+font-size:16px;
+
+}
+
+
+.fleet-content h5{
+
+font-size:14px;
+
+}
+
+
+.fleet-content li{
+
+font-size:11px;
+
+}
+
+
+.fleet-content .btn{
+
+font-size:12px;
+
+padding:8px;
+
+}
+
+
+}
+/* Floating WhatsApp Button */
+
+.whatsapp-float {
+
+    position: fixed;
+
+    width: 60px;
+
+    height: 60px;
+
+    bottom: 25px;
+
+    right: 25px;
+
+    background-color: #25D366;
+
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 32px;
+
+    text-decoration: none;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    z-index: 9999;
+
+    transition: 0.3s ease;
+
+}
+
+
+.whatsapp-float:hover {
+
+    transform: scale(1.1);
+
+    color: white;
+
+}
+
+.destination-card {
+
+    position: relative;
+
+    height: 350px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+}
+
+
+.destination-card img {
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:0.5s ease;
+
+}
+
+
+
+.destination-card:hover img {
+
+    transform:scale(1.1);
+
+}
+
+
+
+.destination-overlay {
+
+    position:absolute;
+
+    bottom:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:25px;
+
+    color:white;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,0.8)
+    );
+
+}
+
+
+
+.destination-overlay h3 {
+
+    font-size:24px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.destination-overlay p {
+
+    font-size:14px;
+
+}
+.cta {
+
+    padding: 45px 0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.65)
+    ),
+    url("../images/banner/hero-car.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+
+.cta h2 {
+
+    font-size: 38px;
+
+}
+
+
+
+.cta p {
+
+    margin-bottom:20px;
+
+}
+
+
+
+/* WhatsApp Button */
+
+.whatsapp-btn {
+
+    background:#25D366;
+
+    color:white;
+
+    border:none;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+}
+
+
+
+.whatsapp-btn:hover {
+
+    background:#1ebe5d;
+
+    color:white;
+
+}
